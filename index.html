@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<!--Copyright 2014, Intrical LLC; some rights reserved (share, but credit; don't profit)-->
+<title>intrical.us</title>
+<meta name="description" content="A different kind of consulting firm. Seriously.">
+<link rel=stylesheet href="css/index.css" type="text/css"/>
+<link rel=stylesheet href="lib/smoothdivscroll/css/smoothDivScroll.css" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="lib/shadowbox/shadowbox.css">
+<link rel="shortcut icon" href="favicon.ico" />
+
+<script type="text/javascript" src="lib/shadowbox/shadowbox.js"></script>
+<script type="text/javascript">
+Shadowbox.init();
+</script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/smoothscroll.js"></script>
+<script type="text/javascript" src="js/tracker.js"></script>
+
+<script type='text/javascript'>
+//<![CDATA[ 
+
+  $(function() {
+    // Stick the #nav to the top of the window
+    var nav = $('#nav');
+    var watermark = $('#watermark');
+    var navHomeY = nav.offset().top;
+    var isFixed = false;
+    var $w = $(window);
+
+    $w.scroll(function() {
+    	// handle nav/watermark existence logic
+        var scrollTop = $w.scrollTop();
+        var shouldBeFixed = scrollTop >= navHomeY;
+        if (shouldBeFixed && !isFixed) {
+            nav.css({
+                position: 'fixed',
+                top: 0
+            });
+
+            watermark.fadeIn();
+            isFixed = true;
+        }
+        else if (!shouldBeFixed && isFixed)
+        {
+            nav.css({
+                position: 'static'
+            });
+            watermark.fadeOut();
+            isFixed = false;
+        }
+
+        // highlight the section being viewed, based (just past) the top of the view
+        $('.section').each(function() {
+        	var section = $(this);
+        	var button = $('#' + section.attr("id") + 'button')
+        	var sectionoffset = 60;
+	    	if(section.offset().top-sectionoffset <= scrollTop && scrollTop < (section.offset().top-sectionoffset)+section.height()) {
+	    		button.addClass('hovered');
+	    	}
+	    	else {
+		    	button.removeClass('hovered');	
+	    	}
+	    });
+	    //special exception to the above for contact, which is small and at the bottom: if the view hits the bottom before the top of the view hits the contact section, the contact button is highlighted regardless of where the top is.
+	    if($(window).scrollTop() + $(window).height() >= $(document).height()) {
+       		$('.button').removeClass('hovered');
+       		$("#contactbutton").addClass('hovered');
+   		}
+
+    });
+
+	$('.projicon').mouseover(function() {
+		$('.projicon').fadeTo(50, .6);
+		$(this).fadeTo(50, 1);
+		var id = $(this).attr('id');
+    	if($('div.project:visible').length != 1 || $('div.project:visible').attr('id')!=id) {
+      		$('div.project:visible').fadeOut(100, function() {
+      			if($('div.project:visible').length == 0) {
+    				$('div#'+id).fadeIn(300);
+    			}
+      		});
+  		}
+  	});
+
+    $('.role').mouseover(function() {
+        $('.role').fadeTo(50, .6);
+        $(this).fadeTo(50, 1);
+        var id = $(this).attr('id')+'roledesc';
+        if($('span.roledesc:visible').length != 1 || $('span.roledesc:visible').attr('id')!=id) {
+            $('span.roledesc:visible').fadeOut(100, function() {
+                if($('span.roledesc:visible').length == 0) {
+                    $('#'+id).fadeIn(300);
+                }
+            });
+        }
+    });
+
+});
+
+function openInNewTab(url)
+{
+  var win=window.open(url, '_blank');
+  win.focus();
+}
+
+//]]>  
+</script>
+</head>
+<body>
+<img id="watermark" src="img/watermark.png"/>
+<div class="stretch" id="logo">
+<img src="img/logo-big.png"></div>
+
+<div class="stretch" id="nav-wrapper"><div id="about-anchor"></div><div class="stretch" id="nav">
+<a href="#about-anchor" class="smoothScroll"><div class="button" id="aboutbutton">About</div></a><a href="#projects" class="smoothScroll"><div class="button" id="projectsbutton">Projects</div></a><a href="#people" class="smoothScroll"><div class="button" id="peoplebutton">People</div></a><a href="#careers" class="smoothScroll"><div class="button" id="careersbutton">Careers</div></a><a href="#contact" class="smoothScroll"><div class="button" id="contactbutton">Contact</div></a><a href="https://medium.com/intrical-intrisights"><div class="button">Blog</div></a></div><div id="social"><a href="http://www.github.com/intrical"><img class="social" src="img/social/gh.png"></a> <a href="http://www.linkedin.com/company/intrical"><img class="social" src="img/social/li.png"></a> <a href="http://www.facebook.com/intrical"><img class="social" src="img/social/fb.png"></a> <a href="http://twitter.com/intricaldotus"><img class="social" src="img/social/tw.png"></a></div></div>
+
+<div class="section" id="about"> <!--begin intro section-->
+<div class="band blue" id="subheader">A different kind of consulting firm. Seriously.</div>
+<div class="bandrow">
+<div class="band gray" id="summary">
+We're policy-minded scientists and engineers focused on public health, education, security, and intelligence. Our goal is to work effectively and operate transparently. We prioritize good governance over high profits, collaboration over competition, and sincerity over appearances.</div></div>
+
+<div class="band" id="postfaq">
+Everyone claims they're different, so we know we have a lot of skepticism to face. But we firmly believe the government contracting industry needs change. For starters, procurement decisions are often made on <a href="http://fcw.com/articles/2013/10/28/techamerica-healthcare-it-acquisition.aspx">questionable technical grounds</a> and subject to <a href="http://www.washingtonpost.com/national/novitass-chris-taylor-makes-his-connections-count-to-win-government-work/2013/12/14/31ccab88-3c48-11e3-b7ba-503fb5822c3e_story.html">unapologetic cronyism</a>, sometimes resulting in <a href="http://www.washingtonpost.com/politics/medicare-chief-marilyn-tavenner-to-testify-before-congress-about-healthcaregov/2013/10/29/12b17814-409e-11e3-a751-f032898f2dbc_story.html">very public mishaps</a>. Moreover, <a href="http://www.washingtonpost.com/business/economy/defense-firms-weathering-budget-cuts-more-easily-than-expected/2013/07/23/d23c4f7e-f3b9-11e2-aa2e-4088616498b4_story_1.html">the industry is subject</a> to many of the <a href="http://blogs.hbr.org/2013/12/americas-economy-is-officially-inside-out/">problems affecting our economy</a> at large. (We covered this in-depth in <a href="http://blog.intrical.us/2013/12/millennials-we-are-morally-obligated-to.html">a recent blog post</a>.)
+</div>
+</div> <!--end intro section-->
+
+<div class="section" id="projects"> <!--begin projects section-->
+<div class="bandrow">
+<div class="band blue" id="whatwhom">
+<div class="whatwedo">We solve complex problems</div>
+<div class="text-right" id="forwhom"><div style="text-align: center;"><img src="img/clients/usflag.png"></div><br />to serve the people of the United States. To this end, we make large-scale and small-scale contributions to large and small organizations, both public and private, as well as pursue internal projects to experiment with our own ideas for improving the country.<a name="faq-anchor"></a></div>
+</div></div>
+<div class="bandrow">
+<div class="band"><div id="projnav">
+<img class="projicon" id="stjos" src="img/clients/stjos.png" onclick="javascript: openInNewTab('http://www.stjo.org');" />
+<img class="projicon" id="usic" src="img/clients/usic.png" onclick="javascript: openInNewTab('http://www.intelligence.gov');" />
+<img class="projicon" id="ipsos" src="img/clients/ipsos.jpg" onclick="javascript: openInNewTab('http://www.ipsos-na.com/');"/>
+<img class="projicon" id="b7" src="img/clients/b7.png" onclick="javascript: openInNewTab('http://www.b7inc.com/');" />
+<img class="projicon" id="districting" src="img/sqlogo.jpg" />
+<img class="projicon" id="dtd" src="img/sqlogo.jpg" />
+</div></div></div>
+<div class="bandrow">
+<div class="band" id="projcontent">
+
+<div class="project" id="stjos">
+<span class="clientname">Saint Joseph's Indian School</span><br/>
+<span class="projname">Evaluation and Logic Model Support</span><br/>
+<div class="projdesc">Saint Joseph's Indian School provides holistic housing and education for Native American children. In close partnership with school leadership, we are working to refine their logic model and develop a survey to assess student outcomes. To monitor program activities and student outcomes, we are developing comprehensive data aggregation across various record systems. Our goal is to identify, implement, and monitor evidence-based programming to serve the Lakota children attending the school.
+</div>
+</div>
+
+<div class="project" id="usic">
+<span class="clientname">US Intelligence Community</span><br/>
+<span class="projname">Data Aggregation Architecture and Policy</span><br/>
+<div class="projdesc">The IC collects information pertinent to securing our nation. The complex task of quickly, effectively, and appropriately safeguarding, sharing, and consolidating this data is a major technical and legal challenge. We work towards a transparent information-sharing environment, applying the latest standards and technologies to aggregate data from disparate sources for comprehensive analysis and actionable intelligence, with strong consideration for performance and ontological feasibility.
+</div>
+</div>
+
+<div class="project" id="ipsos">
+<span class="clientname">Ipsos North America</span><br/>
+<span class="projname">Market Research Support</span><br/>
+<div class="projdesc">Ipsos is a global market research company managed focused on the production, interpretation and distribution of information gathered from individuals about their opinions, desires, attitudes and behaviors. We support Ipsos on qualitative and quantitative market research efforts.
+</div>
+</div>
+
+<div class="project" id="b7">
+<span class="clientname">B7 Inc.</span><br/>
+<span class="projname">Startup Evaluation and Support</span><br/>
+<div class="projdesc">Technology startups with large-growth potential still predominantly originate from or move to Silicon Valley. B7 believes there is little holding back this type of growth in the DC metropolitan area. We support B7 in technical evaluation and demonstration for up-and-coming technologies being developed here in and around DC.
+</div>
+</div>
+
+<div class="project" id="districting">
+<span class="clientname">Congressional Districting</span><br/>
+<span class="projname">Automated Creation and Electoral Simulation</span><br/>
+<div class="projdesc">We're building a platform to algorithmically draw Congressional districts and to evaluate historical election data against generated/historical district lines. Our intent is to explore potential optimizations to our system of representative democracy, frame unanswered Constitutional questions about representative success, and propose objective/non-partisan districting methods based on our findings.
+</div>
+</div>
+
+<div class="project" id="dtd">
+<span class="clientname">Automated Debate</span><br/>
+<span class="projname">Argument Mapping and Mining</span><br/>
+<div class="projdesc">Contentious policy disagreements within the country have resulted in an era of unprecedented partisan gridlock. We believe constructive compromise can be facilitated by reducing common debates to core concepts and questions guiding participants towards the opposing viewpoint. Resulting data may reveal heavily-weighted factors influencing policy positions, generally or within specific demographics. 
+</div>
+</div>
+
+</div></div>
+
+<div class="bandrow">
+<div class="band projicons">
+
+</div></div>
+
+</div> <!--end projects section-->
+
+<div class="section" id="people"> <!--begin people section-->
+<div class="bandrow">
+<div class="band personband">
+<div class="text-left persondesc"><span class="personname">VJ Kapur</span><span class="persontitle">, General Partner</span> &nbsp;<a href="http://www.linkedin.com/pub/vj-kapur/19/70/310/"><img class="social minisocial" src="img/social/li.png"></a><br/>VJ is a computer scientist focused on solving difficult governmental problems in data-, results-, and mission-driven ways. Able to rapidly deconstruct concerns/requirements into any necessary level of detail/scope, he is adept at designing/implementing effective automated solutions.</div>
+<div id="vj"><img class="person" src="img/vj.png"/></div></div></div>
+<div class="bandrow">
+<div class="band personband">
+<div><img class="person" id="kelly" src="img/kelly.png"/></div>
+<div class="text-right persondesc"><span class="personname">Kelly Bell</span><span class="persontitle">, General Partner</span> &nbsp;<a href="http://www.linkedin.com/in/kellyjbell"><img class="social minisocial" src="img/social/li.png"></a><br/>Kelly is a social science researcher focused on improving public health and education initiatives. She works with nonprofits, government programs, and educational institutions to develop performance management processes, conduct program evaluations, and implement evidence-based practices.</div>
+</div>
+</div>
+</div> <!--end people section-->
+
+<div class="section" id="careers"> <!--begin careers section-->
+<div class="bandrow">
+<div class="band gray" id="hirefor">
+We hire for intelligence, creativity, and accomplishment; not years of experience.
+</div></div>
+<div class="bandrow">
+<div class="band" id="ourteam">
+Our team is the key to our success. We only hire exceptional people and reward them accordingly, with above-market compensation plans, comprehensive benefits, and complete transparency into our financials and pay structure.</div></div>
+<div class="bandrow">
+<div class="band blue" id="roles">
+<div class="role" id="research">Research Scientist</div><div class="role" id="tech">Technical Engineer</div><div class="role" id="policy">Policy Analyst</div>
+<div class="roledescdiv white">
+<span class="roledesc" id="researchroledesc">
+Designs and manages research investigations for public programs. Advises clients on implementation and management of evidence-based programs and practices. Authors peer-reviewed articles, white papers, and blog posts to communicate research findings to a broad audience. Stays in touch with recent literature in relevant subject matters.
+</span>
+<span class="roledesc" id="techroledesc">
+Designs and implements system components for various software applications. Evaluates existing software implementations and COTS/GOTS solutions against user concerns. Architects bottom-up solutions, identifying and applying the appropriate technologies for the task. Applies good code management and testing practices. Constantly monitors industry for new technical advancements.
+</span>
+<span class="roledesc" id="policyroledesc">
+Drafts and analyzes policy reports and recommendations. Maintains deep knowledge of government and law, including historical context and recent developments. Conducts policy research with an understanding of the uses and limitations of data sources. Possesses subject matter expertise in policy areas (e.g. law enforcement, intelligence, education, public health).
+</span>
+</div><p/>
+While we appreciate the value of in-depth knowledge about certain fields and methods, we have a strong preference for cross-literate individuals with broad skills and interests. Our engineers write in-depth policy documents and our researchers learn to code. We seek candidates that are well-rounded, open-minded, and motivated to both learn and teach.
+<p/>
+<span id="apply">Interested? Send your resume or LinkedIn profile link to apply@intrical.us.</span>
+</div></div>
+<!--div class="bandrow">
+<div class="band gray" id="broadrole">
+While we appreciate the value of in-depth knowledge about certain fields and methods, we have a strong preference for cross-literate individuals with broad skills and interests. Our engineers write in-depth policy documents and our researchers learn to code. We seek candidates that are well-rounded, open-minded, and motivated to both learn and teach.
+</div></div>
+<div class="bandrow">
+<div class="band white" id="apply">
+Interested? Send a copy of your resume or a link to your LinkedIn profile to apply@intrical.us.
+</div></div-->
+<!--We don't have any specific job openings right now, but are always looking for passionate people who want to contribute to the company. If you're interested, submit <a rel="shadowbox;height=600;width=800" href="app.html">an application</a> for consideration.-->
+</div> <!--end careers section-->
+
+<div class="section" id="contact"> <!--begin bottom section-->
+<div class="bandrow">
+<div class="band" id="dcpride">
+<div class="outer-star"><div class="star"></div></div>
+<div class="outer-star"><div class="star"></div></div>
+<div class="outer-star"><div class="star"></div></div>
+</div></div>
+
+<div class="bandrow">
+<div class="band" id="stripe">
+<div class="text-left" id="contact-title">Contact</div>
+<div class="text-right" id="contact-method"><b>email: </b>info@intrical.us<br/>
+<b>phone: </b>202-810-2920</div>
+</div></div>
+
+<div class="bandrow">
+<div class="band" id="whitestripe">
+</div></div>
+
+<div class="bandrow">
+<div class="band" id="stripe">
+<span class="dcpride">proudly located in The District of Columbia</span>
+</div>
+</div>
+
+<div class="bandrow">
+<div class="band" id="whitestripe">
+copyright 2014, Intrical; <a href="http://creativecommons.org/licenses/by-sa/4.0/">some rights reserved</a>
+</div></div>
+</div> <!--end bottom section-->
+
+<p/><a name="bottom"></a>
+<!--begin smoothdivscroll elements-->
+<script type="text/javascript" src="lib/smoothdivscroll/js/jquery-ui-1.8.23.custom.min.js"></script>
+<script type="text/javascript" src="lib/smoothdivscroll/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="lib/smoothdivscroll/js/jquery.kinetic.min.js"></script>
+<script type="text/javascript" src="lib/smoothdivscroll/js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="lib/smoothdivscroll/js/jquery.smoothdivscroll-1.3-min.js"></script>
+<script type="text/javascript">
+		$(document).ready(function () {
+			$("div#projnav").smoothDivScroll({
+				hotSpotScrollingStep: 10
+			});
+		});
+</script>
+<!--end smoothdivscroll elements-->
+
+</body>
+</html>
