@@ -105,4 +105,100 @@ div.text-left {
 
 #logo {
 	min-height: 240px; /*necessary for proper navbar offset readings*/
+<<<<<<< HEAD
+}
+=======
+}
+
+#watermark {
+	position: fixed;
+	float: left;
+	z-index: 20000;
+	opacity: 0.7;
+	padding-top: 5px;
+	display: none;
+}
+
+#social {
+	position: fixed;
+	top: 5px;
+	right: 10px;
+	float: right;
+	text-align: justify;
+	word-spacing: 2px;
+	width: 205px;
+	z-index: 20000;
+	opacity: 0.7;
+	padding-top: 5px;
+}
+
+img.nav {
+	opacity: 0.7;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+img.nav:hover {
+	opacity: 1;
+}
+
+div.button {
+	width: 100px;
+	height: 40px;
+	font-size: 20px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+div.button:hover {
+	background-color: #4b7494;
+	color: #ffffff;
+}
+
+div.hovered {
+	background-color: #5d6368;
+	color: #ffffff;
+}
+
+img.social {
+	width: 42px;
+	height: 42px;
+	opacity:0.7;
+	padding-bottom: 0px;
+	border: 0px;
+}
+
+img.minisocial {
+	width: 25px;
+	height: 25px;
+}
+
+img.social:hover {
+	opacity: 1;
+}
+
+#nav-wrapper {
+	height: 60px;
+}
+
+#nav {
+	height: 50px;
+	opacity: .9;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#nav a:link, a:visited, a:active {
+	color: #5d6368;
+}
+
+#nav a:hover {
+	color: #ffffff;
+}
+
+#subheader {
+	vertical-align: middle;
+	font-size: 35px;
+	text-align: center;
+	padding: 20px;
 }
