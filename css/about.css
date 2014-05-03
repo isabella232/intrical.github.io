@@ -29,3 +29,28 @@
 	color: #5d6368;
 	text-align: justify;
 }
+
+#capabilities {
+	display: table;
+}
+
+#capability-header {
+	font-size: 25px;
+	padding: 20px;
+}
+
+div.capability-row {
+	display: table-row;
+}
+
+div.capability-cell {
+	display: table-cell;
+	width: 30%;
+	text-align: center;
+	padding: 2px;
+	font-size: 20px;
+}
+
+img.capability {
+
+}
