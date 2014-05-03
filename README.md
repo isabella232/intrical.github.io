@@ -12,7 +12,7 @@ Copyright 2014, Intrical LLC. All rights reserved on the name "Intrical" name an
 The following elements of this page did not originate with Intrical and are not included in the above licensing terms:
 * __[smoothdivscroll](http://www.smoothdivscroll.com)__ (lib/smoothdivscroll): available under the [GNU General Public License](http://www.gnu.org/licenses/gpl-3.0.html)
 * __[SmoothScroll](http://www.dwuser.com/education/content/quick-guide-adding-smooth-scrolling-to-your-webpages/)__ (js/smoothscroll.js): dual-licensed under GPL and MIT licenses
-* __[Google Analytics tracker](http://www.google.com/analytics/)__ (js/tracker.js)
+* __[Google Analytics tracker](http://www.google.com/analytics/)__ (js/tracker.js): used under Google terms
 * __[jQuery v1.7.2](http://www.jquery.org)__ (js/jquery.min.js): available under the MIT License
 * __[SensationalFix flat social icons](http://sensationalfix.com/flat-social-icons-eps/)__ (img/social/fb.png, li.png, tw.png): available under limited license, included in folder
 * __[Github icon](http://www.flaticon.com/free-icon/github-logo-silhouette-in-a-square_38401)__ (img/social/gh.png): available under free license
