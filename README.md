@@ -4,9 +4,9 @@ Oh, you know. Websites.
 ##Credits/Licensing
 
 ###Original content
-Copyright 2014, Intrical LLC. All rights reserved on the name "Intrical" name and logos, but...
-
-Text content of this website is freely released under the [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) license. All Intrical-originated code is freely released under the [MIT Expat License](http://opensource.org/licenses/MIT).
+Copyright 2014, Intrical LLC. All rights reserved on the name "Intrical" name and logos, some rights reserved on the rest:
+* Text content of this website is freely released under the [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) license. If you share our values and want to share our words, you're welcome to (though endorsement would require a conversation).
+* Intrical-originated code (html/css/js) is freely released under the [MIT Expat License](http://opensource.org/licenses/MIT).
 
 ###Unoriginal content
 The following elements of this page did not originate with Intrical and are not included in the above licensing terms:
