@@ -16,7 +16,7 @@ The following elements of this page did not originate from Intrical and are not 
 * __[SmoothScroll](http://www.dwuser.com/education/content/quick-guide-adding-smooth-scrolling-to-your-webpages/)__ (js/smoothscroll.js): dual-licensed under GPL and MIT licenses
 * __[Google Analytics tracker](http://www.google.com/analytics/)__ (js/tracker.js): used under Google terms
 * __[jQuery v1.7.2](http://www.jquery.org)__ (js/jquery.min.js): available under the MIT License
-* __[freepik icons]__ (img/capabilities): available under free license
+* __[freepik icons](http://www.flaticon.com/authors/freepik/)__ (img/capabilities): available under free license
 * __[SensationalFix flat social icons](http://sensationalfix.com/flat-social-icons-eps/)__ (img/social/fb.png, li.png, tw.png): available under limited license, included in folder
 * __[Github icon](http://www.flaticon.com/free-icon/github-logo-silhouette-in-a-square_38401)__ (img/social/gh.png): available under free license
 * __Medium icon__ (img/social/md.png): rights reserved to [Medium](http://www.medium.com)
