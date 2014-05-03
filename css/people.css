@@ -1,0 +1,38 @@
+span.personname {
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+span.persontitle {
+	font-size: 30px;
+	font-style: italic;
+}
+
+img.person {
+	width: 175px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#persons {
+	text-align: center;
+}
+
+div.personband {
+	padding: 10px;
+}
+
+div.persondesc {
+	width: 680px;
+	padding: 20px;
+	font-size: 20px;
+}
+
+#vj {
+	float: right;
+}
+
+#kelly {
+	float: left;
+}

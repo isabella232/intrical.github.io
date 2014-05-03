@@ -1,4 +1,7 @@
 @import "main.css";
+@import "nav.css";
 @import "about.css";
 @import "projects.css";
-@import "bottom.css";
+@import "people.css";
+@import "careers.css";
+@import "contact.css";

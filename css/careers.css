@@ -1,0 +1,60 @@
+#hirefor {
+	padding: 10px;
+	font-size: 40px;
+	text-align: center;
+}
+
+#ourteam {
+	font-size: 32px;
+	padding: 40px;
+	text-align: justify;
+}
+
+#roles {
+	font-size: 20px;
+	padding: 20px;
+	text-align: justify;
+	height: 270px;
+}
+
+div.role {
+	display: table-cell;
+	opacity: .6;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 27px;
+	font-weight: bold;
+	width: 260px;
+}
+
+#research {
+	opacity: 1;
+}
+
+div.roledescdiv {
+	padding: 20px;
+	height: 120px;
+	text-align: justify;
+}
+
+span.roledesc {
+	text-align: justify;
+	display: none;
+}
+
+#researchroledesc {
+	display: block;
+}
+
+#broadrole {
+	text-align: justify;
+	padding: 10px;
+	font-size: 25px;
+}
+
+#apply {
+	font-size: 27px;
+}
