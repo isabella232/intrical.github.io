@@ -1,5 +1,5 @@
 #intrical.us
-The goal of this website is to bridge the principles of modern flat web design with the dated world of federal government contracting. Clients may visit us from hardened computers running IE7 on WinXP (worst-case, VM-tested) on slow connections. We tried to keep words to a minimum and avoid the industry-common practice of repeatedly forked buzzword-laden essays (we're too nice to single out examples).
+The goal of this website is to bridge the principles of modern flat web design with the dated world of federal government contracting. Clients could conceivably visit us from hardened computers running IE7 on WinXP (worst-case, VM-tested) on slow connections, and we wanted to account for that. We tried to keep words to a minimum and avoid the industry-common practice of repeatedly forked buzzword-laden essays (we're too nice to single out examples), so forcing a single-page interface with all pertineent subjects was important to us.
 
 ##Credits/Licensing
 
