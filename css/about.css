@@ -45,12 +45,7 @@ div.capability-row {
 
 div.capability-cell {
 	display: table-cell;
-	width: 30%;
 	text-align: center;
 	padding: 2px;
 	font-size: 20px;
-}
-
-img.capability {
-
 }
