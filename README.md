@@ -11,7 +11,7 @@ Copyright 2014, Intrical LLC. All rights reserved on the Intrical name and logos
 *logos created by [Meredith Wish](http://thoughtfulwish.com/)
 
 ###Unoriginal content
-The following elements of this page did not originate from Intrical and are not included in the above licensing terms:
+The following elements of this page did not originate from Intrical and are not necessarily included in the above licensing terms:
 * __[smoothdivscroll](http://www.smoothdivscroll.com)__ (lib/smoothdivscroll): available under the [GNU General Public License](http://www.gnu.org/licenses/gpl-3.0.html)
 * __[SmoothScroll](http://www.dwuser.com/education/content/quick-guide-adding-smooth-scrolling-to-your-webpages/)__ (js/smoothscroll.js): dual-licensed under GPL and MIT licenses
 * __[Google Analytics tracker](http://www.google.com/analytics/)__ (js/tracker.js): used under Google terms
