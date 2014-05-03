@@ -1,0 +1,5 @@
+# OSX stuff
+.DS_Store
+
+# offline testing
+preprod.html
