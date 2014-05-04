@@ -7,13 +7,13 @@
 <meta name="description" content="A different kind of consulting firm. Seriously.">
 <link rel=stylesheet href="css/index.css" type="text/css"/>
 <link rel=stylesheet href="lib/smoothdivscroll/css/smoothDivScroll.css" type="text/css"/>
-<link rel="stylesheet" type="text/css" href="lib/shadowbox/shadowbox.css">
+<!--link rel="stylesheet" type="text/css" href="lib/shadowbox/shadowbox.css"-->
 <link rel="shortcut icon" href="favicon.ico" />
 
-<script type="text/javascript" src="lib/shadowbox/shadowbox.js"></script>
+<!--script type="text/javascript" src="lib/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
-</script>
+</script-->
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/smoothscroll.js"></script>
@@ -52,23 +52,26 @@ Shadowbox.init();
             isFixed = false;
         }
 
-        // highlight the section being viewed, based (just past) the top of the view
-        $('.section').each(function() {
-        	var section = $(this);
-        	var button = $('#' + section.attr("id") + 'button')
-        	var sectionoffset = 60;
-	    	if(section.offset().top-sectionoffset <= scrollTop && scrollTop < (section.offset().top-sectionoffset)+section.height()) {
-	    		button.addClass('hovered');
-	    	}
-	    	else {
-		    	button.removeClass('hovered');	
-	    	}
-	    });
-	    //special exception to the above for contact, which is small and at the bottom: if the view hits the bottom before the top of the view hits the contact section, the contact button is highlighted regardless of where the top is.
-	    if($(window).scrollTop() + $(window).height() >= $(document).height()) {
-       		$('.button').removeClass('hovered');
-       		$("#contactbutton").addClass('hovered');
-   		}
+        //handle section changes
+        if($(window).scrollTop() + $(window).height() >= $(document).height()) {
+            //special exception to the below for contact, which is small and at the bottom: if the view hits the bottom before the top of the view hits the contact section, the contact button is highlighted regardless of where the top is.
+            $('.button').removeClass('hovered');
+            $("#contactbutton").addClass('hovered');
+        }
+        else {
+            $('.section').each(function() {
+                var section = $(this);
+                var sectionid = section.attr("id");
+                var button = $('#' + sectionid + 'button')
+                var sectionoffset = 60;
+                if(section.offset().top-sectionoffset <= scrollTop && scrollTop < (section.offset().top-sectionoffset)+section.height()) {
+                    button.addClass('hovered');
+                }
+                else {
+                    button.removeClass('hovered');    
+                }
+            });
+        }
 
     });
 
@@ -147,9 +150,6 @@ We're policy-minded scientists and engineers focused on public health, education
 
 </div></div>
 
-<!--div class="band" id="postfaq">
-Everyone claims they're different, so we know we have a lot of skepticism to face. But we firmly believe the government contracting industry needs change. For starters, procurement decisions are often made on <a href="http://fcw.com/articles/2013/10/28/techamerica-healthcare-it-acquisition.aspx">questionable technical grounds</a> and subject to <a href="http://www.washingtonpost.com/national/novitass-chris-taylor-makes-his-connections-count-to-win-government-work/2013/12/14/31ccab88-3c48-11e3-b7ba-503fb5822c3e_story.html">unapologetic cronyism</a>, sometimes resulting in <a href="http://www.washingtonpost.com/politics/medicare-chief-marilyn-tavenner-to-testify-before-congress-about-healthcaregov/2013/10/29/12b17814-409e-11e3-a751-f032898f2dbc_story.html">very public mishaps</a>. Moreover, <a href="http://www.washingtonpost.com/business/economy/defense-firms-weathering-budget-cuts-more-easily-than-expected/2013/07/23/d23c4f7e-f3b9-11e2-aa2e-4088616498b4_story_1.html">the industry is subject</a> to many of the <a href="http://blogs.hbr.org/2013/12/americas-economy-is-officially-inside-out/">problems affecting our economy</a> at large. (We covered this in-depth in <a href="http://blog.intrical.us/2013/12/millennials-we-are-morally-obligated-to.html">a recent blog post</a>.)
-</div-->
 </div> <!--end about section-->
 
 <div class="section" id="projects"> <!--begin projects section-->
@@ -260,7 +260,6 @@ While we appreciate the value of in-depth knowledge about certain fields and met
 <p/>
 <span id="apply">Interested? Send your resume or LinkedIn profile link to apply@intrical.us.</span>
 </div></div>
-<!--We don't have any specific job openings right now, but are always looking for passionate people who want to contribute to the company. If you're interested, submit <a rel="shadowbox;height=600;width=800" href="app.html">an application</a> for consideration.-->
 </div> <!--end careers section-->
 
 <div class="section" id="contact"> <!--begin contact section-->
